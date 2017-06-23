@@ -14,7 +14,7 @@ OS=$(uname -s)
 ## Possible drat repos, unset by default
 DRAT_REPOS=${DRAT_REPOS:-""}
 
-PANDOC_VERSION='1.13.1'
+PANDOC_VERSION='1.19.2.1'
 PANDOC_DIR="${HOME}/opt/pandoc"
 PANDOC_URL="https://s3.amazonaws.com/rstudio-buildtools/pandoc-${PANDOC_VERSION}.zip"
 
@@ -80,8 +80,8 @@ BootstrapLinux() {
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 
     # Add marutter's c2d4u repository.
-    sudo add-apt-repository -y "ppa:marutter/rrutter"
-    sudo add-apt-repository -y "ppa:marutter/c2d4u"
+ #   sudo add-apt-repository -y "ppa:marutter/rrutter"
+ #   sudo add-apt-repository -y "ppa:marutter/c2d4u"
 
     # Update after adding all repositories.  Retry several times to work around
     # flaky connection to Launchpad PPAs.
